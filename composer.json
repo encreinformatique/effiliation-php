@@ -1,0 +1,46 @@
+{
+  "name": "yuzu-co/effiliation-php",
+  "type": "library",
+  "description": "PHP library for the Effiliation API.",
+  "keywords": [
+    "effiliation",
+    "affiliation"
+  ],
+  "homepage": "https://github.com/yuzu-co/effiliation-php",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Olivier Mouren",
+      "email": "olivier@yuzu.co"
+    }
+  ],
+  "require": {
+    "php" : "~5.6|~7.0",
+    "guzzlehttp/guzzle": "~6.0",
+    "symfony/options-resolver": "~2.6|~3.0"
+  },
+  "require-dev": {
+    "atoum/atoum": "dev-master",
+    "squizlabs/php_codesniffer": "^2.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Yuzu\\Effiliation\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Yuzu\\Effiliation\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "tests": "vendor/bin/atoum -d tests/Units",
+    "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+    "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  }
+}
