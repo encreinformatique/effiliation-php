@@ -25,5 +25,5 @@ $client = new Yuzu\Effiliation\Client($apiToken);
 ## Tests
 
 ```php
-php composer tests
+php composer test
 ```
