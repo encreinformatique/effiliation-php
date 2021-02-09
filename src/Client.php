@@ -7,13 +7,14 @@ use Yuzu\Effiliation\Request\GetProgrammesDefinition;
 use Yuzu\Effiliation\Request\GetTransactionsDefinition;
 use Yuzu\Effiliation\Request\RequestDefinitionInterface;
 use GuzzleHttp\Client as GuzzleClient;
+use GuzzleHttp\ClientInterface as GuzzleClientInterface;
 
 /**
  * Class Client
  *
  * @author Olivier Mouren <olivier@yuzu.co>
  */
-class Client
+class Client implements ClientInterface
 {
     const EFFILIATION_API_ENDPOINT = 'http://apiv2.effiliation.com';
 
@@ -30,14 +31,14 @@ class Client
         $this->apiToken = $apiToken;
     }
 
-    public function getClient()
+    public function getClient(): GuzzleClientInterface
     {
         if (empty($this->httpClient)) {
             $this->httpClient = new GuzzleClient([
                 'base_uri' => self::EFFILIATION_API_ENDPOINT
             ]);
         }
-        
+
         return $this->httpClient;
     }
 

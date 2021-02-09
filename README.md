@@ -1,7 +1,16 @@
 # Effiliation PHP
 
-[![Build Status](https://travis-ci.org/yuzu-co/effiliation-php.svg?branch=master)](https://travis-ci.org/yuzu-co/effiliation-php)
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/e8682a74-f9aa-4e70-92b5-9f58048d0e8f/mini.png)](https://insight.sensiolabs.com/projects/e8682a74-f9aa-4e70-92b5-9f58048d0e8f)
+![CI](https://github.com/encreinformatique/effiliation-php/workflows/CI/badge.svg)
+
+This is a fork from [yuzu-co/effiliation-php](https://github.com/yuzu-co/effiliation-php)
+While the original codebase supported PHP 5.6, I decided to drop it and PHP 7.0 to 7.1.
+They ended their life and I do not use them either.
+
+For those versions of PHP, please refer to the original codebase.
+
+The name into the composer has now changed to `encreinformatique/effiliation-php`.
+
+---
 
 PHP library for the Effiliation API.
 
