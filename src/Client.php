@@ -59,7 +59,7 @@ class Client implements ClientInterface
      * @param array $options
      * @return Http\Response
      */
-    public function getProgrammes(array $options = [])
+    public function getProgrammes(array $options = []): Response
     {
         return $this->send(new GetProgrammesDefinition($options));
     }
@@ -69,7 +69,7 @@ class Client implements ClientInterface
      * @param array $options
      * @return Http\Response
      */
-    public function getTransactions(array $options = [])
+    public function getTransactions(array $options = []): Response
     {
         return $this->send(new GetTransactionsDefinition($options));
     }
