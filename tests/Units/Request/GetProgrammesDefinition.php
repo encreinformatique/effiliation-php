@@ -2,7 +2,7 @@
 
 namespace Yuzu\Effiliation\Tests\Units\Request;
 
-use mageekguy\atoum;
+use atoum\atoum;
 use Yuzu\Effiliation\Enum\RegistrationStateTypeEnum;
 
 class GetProgrammesDefinition extends atoum\test
